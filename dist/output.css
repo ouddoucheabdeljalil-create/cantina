@@ -1051,6 +1051,24 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\"\"\] {
+  color: "";
+}
+
+.text-\[\#ff\] {
+  color: #ff;
+}
+
+.text-\[\#F4EFE6\] {
+  --tw-text-opacity: 1;
+  color: rgb(244 239 230 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#FAF8F5\] {
+  --tw-text-opacity: 1;
+  color: rgb(250 248 245 / var(--tw-text-opacity, 1));
+}
+
 .outline-inherit {
   outline-color: inherit;
 }
