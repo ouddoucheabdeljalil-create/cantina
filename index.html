@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="style.css">
     <title>Catina</title>
 </head>
 
@@ -12,7 +13,7 @@
     <header class="bg-[#EAE4D9] h-20 ">
         <a href="#index.html"><img src="img/Logo de restaurant YouCode .png" alt="" class="h-20 w-auto flex justify-center"></a>
     </header>
-    <main class="font-semibold bg-[#FAF8F5] text-[#FFFFFF] lg:grid grid-cols-4 text-[#000000]">
+    <main class="font-semibold  bg-[#FAF8F5] text-[#FFFFFF] lg:grid grid-cols-4 text-[#000000]">
         <section class="flex flex-col m-2 mt-3  gap-5 lg:flex-row col-span-4 m-3 mt-5">
             <div class="bg-[#5B7036] text-[#FFFFFF] text-2xl w-full h-20 rounded-lg flex gap-4 items-center justify-center ">
                 <p>1</p>
@@ -177,9 +178,10 @@
             </article>
         </section>
 
-        <aside class="bg-[#E2D9C5]  m-2 rounded-lg flex flex-col max-md: col-span-1 m-3">
-            <button class="bg-[#5B7036] text-[#FFFFFF] p-2 m-5 rounded-lg">Ajouter une recette</button>
-            <div class="flex flex-col gap-6 m-5  py-5 bg-[#FFFFFF]  rounded-lg">
+        <aside id="aside" class="bg-[#E2D9C5]  m-2 rounded-lg flex flex-col max-md: col-span-1 m-3">
+            <button id="btn-ajoute" class="bg-[#5B7036] text-[#FFFFFF] p-2 m-5 rounded-lg">Ajouter une recette</button>
+            <div id="lmakla">
+            <div  class="flex flex-col gap-6 m-5  py-5 bg-[#FFFFFF]  rounded-lg">
                 <div class="flex justify-between mx-5">
                     <h2 class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]">tagine de poulet</h2>
                     <p class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]">25 DH</p>
@@ -192,14 +194,41 @@
                     <button class="bg-green-100 border-2 border[#5B7036]-500 px-3 py-1 rounded-lg text-[#5B7036]">modifier</button>
                     <button class="bg-red-100 border border-red-500 px-3 py-1 rounded-lg text-[#B91C1C]">supprime</button>
                 </div>
-
+                </div>
             </div>
         </aside>
 
-
+        <div id="folmulaire" class="hidden">
+            <div class=" bg-green-200  m-5 pb-5  ">
+            <h2 class="flex justify-center text-2xl">Nouvelle recette</h2>
+            <form id="form1" action="" class="flex flex-col gap-4 p-3 w-full ">
+                <label for="nom-plat">Nom du plat</label>
+                <input type="text" id="nom-plat" class="">
+                <label for="" >Catégorie</label>
+                <select name="" id="categorie">
+                    <option value="">— Choisir —</option>
+                    <option value="entree">Entrée</option>
+                    <option value="plat">Plat</option>
+                    <option value="dessert">Dessert</option>
+                </select>
+                <label for="">Badge</label>
+                <select name="" id="badge">
+                    <option value="">— Choisir —</option>
+                    <option value="Classique">Classique</option>
+                    <option value="Bio">Bio</option>
+                    <option value="Végétarien">Végétarien</option>
+                </select>
+                <label for="">Prix DH</label>
+                <input type="text" id="prix">
+            </form>
+            <div class="flex justify-center">
+            <button id="btn-submit" class="" >Valider</button>
+            </div>
+            </div>
+        </div>
 
     </main>
 
 </body>
-
+    <script src="script.js"></script>
 </html>

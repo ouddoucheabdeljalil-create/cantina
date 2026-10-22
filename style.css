@@ -1,0 +1,38 @@
+
+#folmulaire{
+    position: fixed;
+    bottom: 100px;
+    left: 65px;
+    width: 400px;
+    
+}
+ input {
+    height: 50px;
+    border-radius: 12px;
+    padding-left: 16px;
+ }
+ select{
+    height: 50px;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+ label{
+    font-family:Arial, Helvetica, sans-serif;
+ }
+ #btn-submit{
+    background-color: blue;
+    border-radius: 32px;
+    height: 40px;
+    width: 80px;
+    border-radius: 12px;
+    
+ }
+ .divFood{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    
+ }
+ 
