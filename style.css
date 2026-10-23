@@ -30,9 +30,10 @@
  }
  .divFood{
     background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
     
+    margin: 8px;
+    padding-top: 8px 0px 8px 0px;
  }
- 
