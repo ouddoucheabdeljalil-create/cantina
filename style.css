@@ -20,7 +20,7 @@
  label{
     font-family:Arial, Helvetica, sans-serif;
  }
- #btn-submit{
+ #btn-submit,#btn-annuler{
     background-color: blue;
     border-radius: 32px;
     height: 40px;
@@ -37,11 +37,7 @@
     margin: 8px;
     padding-top: 8px 0px 8px 0px;
  }
- .nom-plat.active{
-    border: 2px solid;
-    border-color: red;
-    
- }
+ 
  @media (min-width : 1024px){
  #lmakla{
     height: 848px;
