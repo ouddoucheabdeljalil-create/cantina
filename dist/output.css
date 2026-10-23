@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -643,6 +647,14 @@ video {
   height: 100%;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
+.h-0 {
+  height: 0px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -683,6 +695,10 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -717,6 +733,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .rounded-lg {
@@ -1178,6 +1198,10 @@ video {
 
   .md\:col-span-4 {
     grid-column: span 4 / span 4;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:grid {
