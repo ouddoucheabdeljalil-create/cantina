@@ -1,20 +1,25 @@
 
 #folmulaire{
+    
+    
     position: fixed;
-    bottom: 100px;
-    left: 65px;
+    bottom: 200px;
+    left: 535px;
     width: 400px;
+    
     
 }
  input {
     height: 50px;
     border-radius: 12px;
     padding-left: 16px;
+    width: 100%;
  }
  select{
     height: 50px;
     border-radius: 12px;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
     
 }
  label{
@@ -37,7 +42,16 @@
     margin: 8px;
     padding-top: 8px 0px 8px 0px;
  }
- 
+ #lmakla{
+    height: 500px;
+ }
+ #bg-folmulaire{
+    position: fixed;
+    background-color: yellow;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+ }
  @media (min-width : 1024px){
  #lmakla{
     height: 848px;

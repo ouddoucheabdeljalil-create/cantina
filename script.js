@@ -3,7 +3,8 @@ const food = []
 const btnAjoute = document.getElementById('btn-ajoute');
 const folumlaire = document.getElementById('folmulaire');
 const btnSubmit = document.getElementById('btn-submit');
-const btnAnnuler = document.getElementById('btn-annuler')
+const btnAnnuler = document.getElementById('btn-annuler');
+const bgFolmulaire = document.getElementById('bg-folmulaire')
 
 //   fuction d'affichage
 const nomPlat = document.getElementById('nom-plat');
@@ -30,7 +31,7 @@ function afficherFood (){
         <div class="flex justify-between mx-5"><p class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]"">${p.categorie.value}</p>
         <p class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]"">${p.badge.value}</p></div>
          <div class="flex justify-between mx-5"><button class="bg-green-100 border-2 border[#5B7036]-500 px-3 py-1 rounded-lg text-[#5B7036]">Modifier</button> 
-         <button  class="bg-red-100 border border-red-500 px-3 py-1 rounded-lg text-[#B91C1C]">Supprime</button></div></div>`
+         <button   class="bg-red-100 border border-red-500 px-3 py-1 rounded-lg text-[#B91C1C]">Supprime</button></div></div>`
     }
     console.log(food)
     const lmkla = document.getElementById('lmakla')
@@ -44,18 +45,25 @@ const count = document.getElementById('compteur')
 btnAjoute.addEventListener('click', function (e) {
     e.preventDefault
     folumlaire.classList.remove('hidden');
+    bgFolmulaire.classList.remove('hidden')
 })
 btnSubmit.addEventListener('click', function (e) {
         e.preventDefault()
         folumlaire.classList.toggle('hidden');
+        bgFolmulaire.classList.add('hidden')
         afficherFood()
         compteur++;
         count.textContent = compteur;
        
 })
+bgFolmulaire.addEventListener('click', function(){
+    folumlaire.classList.add('hidden');
+    bgFolmulaire.classList.add('hidden');
+})
 btnAnnuler.addEventListener('click' , function(e){
     e.preventDefault()
     folumlaire.classList.add('hidden')
+    bgFolmulaire.classList.add('hidden')
 })
 
 
