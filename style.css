@@ -1,26 +1,23 @@
 
-#folmulaire{
-    position: fixed;
-    bottom: 100px;
-    left: 65px;
-    width: 400px;
-    
-}
+
  input {
     height: 50px;
     border-radius: 12px;
     padding-left: 16px;
+    width: 100%;
+    
  }
  select{
     height: 50px;
     border-radius: 12px;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
     
 }
  label{
     font-family:Arial, Helvetica, sans-serif;
  }
- #btn-submit{
+ #btn-submit,#btn-annuler{
     background-color: blue;
     border-radius: 32px;
     height: 40px;
@@ -37,13 +34,64 @@
     margin: 8px;
     padding-top: 8px 0px 8px 0px;
  }
- .nom-plat.active{
-    border: 2px solid;
-    border-color: red;
+ #lmakla{
+    height: 500px;
+ }
+ 
+ #bg-folmulaire{
+    position: fixed;
     
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ #folmulaire{
+    position: fixed;
+    bottom: 70px;
+    left: 15px;
+    width: 400px; 
+}
+.div-btn{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 0px 20px 4px 20px ;
+}
+.btn-Modifier{
+   background-color: rgba(0, 128, 0, 0.244);
+   border: green solid;
+   padding : 3px 6px 3px 6px;
+   border-radius: 12px;
+   color: green;
+}
+.btn-supprime{
+   background-color: rgba(218, 29, 29, 0.317);
+   border: red solid;
+   padding : 3px 6px 3px 6px;
+   border-radius: 12px;
+   color: red;
+}
+
+@media (min-width : 768px){
+#folmulaire{
+    position: fixed;
+    left: 160px;
+    width: 450px;
+}
+#lmakla{
+    height: 500px;
+    overflow-x: hidden;
  }
  @media (min-width : 1024px){
  #lmakla{
     height: 848px;
  }
+ #folmulaire{
+    position: fixed;
+    bottom: 180px;
+    left: 535px;
+    width: 400px;
+}
+ 
+}
 }

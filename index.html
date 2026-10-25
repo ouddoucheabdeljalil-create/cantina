@@ -18,7 +18,7 @@
         <section class="flex flex-col m-2 mt-3  gap-5 lg:flex-row col-span-4 m-3 mt-5">
             <div
                 class="bg-[#5B7036] text-[#FFFFFF] text-2xl w-full h-20 rounded-lg flex gap-4 items-center justify-center ">
-                <p>1</p>
+                <p id="compteur">0</p>
                 <p>Plats en réserve</p>
             </div>
             <div
@@ -185,55 +185,52 @@
 
         <aside id="aside" class=" bg-[#E2D9C5]  m-2 rounded-lg flex flex-col gap-2 max-md: col-span-1 m-3 ">
             <button id="btn-ajoute" class="bg-[#5B7036] text-[#FFFFFF] p-2 m-5 rounded-lg">Ajouter une recette</button>
-            <div id="lmakla" class="md:grid grid-cols-2 lg:flex flex-col overflow-auto ">
-                <!-- <div id="article-reccete" class="flex flex-col gap-6 m-5   py-5 bg-[#FFFFFF]  rounded-lg ">
-                    <div class="flex justify-between mx-5">
-                        <h2 class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]">tagine de
-                            poulet</h2>
-                        <p class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]">25 DH</p>
-                    </div>
-                    <div class="flex justify-between mx-5">
-                        <p class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]">plat</p>
-                        <p class="bg-[#F4EFE6] px-3 py-1 rounded-lg text-[#5B7036] border border-[#5B7036]">classique
-                        </p>
-                    </div>
-                    <div class="flex justify-between mx-5">
-                        <button
-                            class="bg-green-100 border-2 border[#5B7036]-500 px-3 py-1 rounded-lg text-[#5B7036]">modifier</button>
-                        <button
-                            class="bg-red-100 border border-red-500 px-3 py-1 rounded-lg text-[#B91C1C]">supprime</button>
-                    </div>
-                </div> -->
+            <div id="lmakla" class="md:grid gap-2  lg:flex flex-col overflow-auto ">
+
             </div>
         </aside>
-
-        <div id="folmulaire" class="hidden">
+        <div id="bg-folmulaire" class="hidden"></div>
+        <div id="folmulaire" class="hidden" >
             <div class=" bg-green-200  m-5 pb-5  ">
                 <h2 class="flex justify-center text-2xl">Nouvelle recette</h2>
                 <form id="form1" action="" class="flex flex-col gap-4 p-3 w-full ">
-                    <label for="nom-plat">Nom du plat</label>
-                    <input type="text" id="nom-plat" class="nom-plat" >
-                    <label for="">Catégorie</label>
-                    <select name="" id="categorie" value="choisir">
-                        <option value="choisir">— Choisir —</option>
-                        <option value="entree">Entrée</option>
-                        <option value="plat">Plat</option>
-                        <option value="dessert">Dessert</option>
-                    </select>
-                    <label for="">Badge</label>
-                    <select name="" id="badge">
-                        <option value="choisir">— Choisir —</option>
-                        <option value="Classique">Classique</option>
-                        <option value="Bio">Bio</option>
-                        <option value="Végétarien">Végétarien</option>
-                    </select>
-                    <label for="">Prix DH</label>
-                    <input type="text" id="prix">
+                    <div >
+                        <label for="nom-plat">Nom du plat</label>
+                        <input required type="text" id="nom-plat" class="nom-plat">
+                        <span id="nom-plat-error" class="text-red-500"></span>
+                    </div >
+                    <div >
+                        <label for="">Catégorie</label>
+                        <select name="" id="categorie" value="choisir" required>
+                            <option value="" disabled selected>— Choisir —</option>
+                            <option value="entree">Entrée</option>
+                            <option value="plat">Plat</option>
+                            <option value="dessert">Dessert</option>
+                        </select>
+                        <span id="categorie-error"></span>
+                    </div>
+                    <div >
+                        <label for="">Badge</label>
+                        <select name="" id="badge" required>
+                            <option value="" disabled selected>— Choisir —</option>
+                            <option value="Classique">Classique</option>
+                            <option value="Bio">Bio</option>
+                            <option value="Végétarien">Végétarien</option>
+                        </select>
+                        <span id="badge-error"></span>
+                    </div>
+                    <div >
+                        <label for="">Prix DH</label>
+                        <input type="number" id="prix" required>
+                        <span id="prix-error"></span>
+                    </div>
+                    <div class="flex justify-between mx-5">
+                        <button id="btn-submit" class="" type="submit">Valider</button>
+                        <button id="btn-annuler">Annuler</button>
+                    </div>
                 </form>
-                <div class="flex justify-center">
-                    <button id="btn-submit" class="">Valider</button>
-                </div>
             </div>
+        </div>
         </div>
 
     </main>

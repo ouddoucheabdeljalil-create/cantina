@@ -707,6 +707,14 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1181,6 +1189,11 @@ video {
 .text-\[\#FAF8F5\] {
   --tw-text-opacity: 1;
   color: rgb(250 248 245 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .outline-inherit {
