@@ -50,7 +50,7 @@
                         <label for="" class="bg-[#B8771A] rounded-lg w-20 pl-2">Enteée</label>
                         <select name="entree" id="entree" class="bg-[#F4EFE6]  rounded-lg h-10 ">
                             <option value=" entree">En réserve</option>
-                            <option value=" entree">En réserve</option>
+
                         </select>
                     </div>
                     <div class=" flex flex-col mx-5 gap-2">
@@ -75,7 +75,7 @@
                 <div class="flex flex-col gap-5 bg-[#FFFFFF] border-2 border-black-500 w-100 h-auto rounded-lg pb-5">
                     <h2 class="ml-5 pt-3 ">Mardi</h2>
                     <div class=" flex flex-col mx-5 gap-2">
-                        <label for="" class="bg-[#B8771A]  rounded-lg w-20">Enteée</label>
+                        <label for="" class="bg-[#B8771A]  rounded-lg w-20 pl-2">Enteée</label>
                         <select name="entree" id="entree" class="bg-[#F4EFE6]  rounded-lg h-10 ">
                             <option value=" entree">En réserve</option>
                             <option value=" entree">En réserve</option>
@@ -190,18 +190,18 @@
             </div>
         </aside>
         <div id="bg-folmulaire" class="hidden"></div>
-        <div id="folmulaire" class="hidden" >
+            <div id="folmulaire" class="hidden">
             <div class=" bg-green-200  m-5 pb-5  ">
                 <h2 class="flex justify-center text-2xl">Nouvelle recette</h2>
                 <form id="form1" action="" class="flex flex-col gap-4 p-3 w-full ">
-                    <div >
+                    <div>
                         <label for="nom-plat">Nom du plat</label>
-                        <input required type="text" id="nom-plat" class="nom-plat">
+                        <input  type="text" id="nom-plat" class="nom-plat">
                         <span id="nom-plat-error" class="text-red-500"></span>
-                    </div >
-                    <div >
+                    </div>
+                    <div>
                         <label for="">Catégorie</label>
-                        <select name="" id="categorie" value="choisir" required>
+                        <select name="" id="categorie" value="choisir" >
                             <option value="" disabled selected>— Choisir —</option>
                             <option value="entree">Entrée</option>
                             <option value="plat">Plat</option>
@@ -209,9 +209,9 @@
                         </select>
                         <span id="categorie-error"></span>
                     </div>
-                    <div >
+                    <div>
                         <label for="">Badge</label>
-                        <select name="" id="badge" required>
+                        <select name="" id="badge" >
                             <option value="" disabled selected>— Choisir —</option>
                             <option value="Classique">Classique</option>
                             <option value="Bio">Bio</option>
@@ -219,9 +219,9 @@
                         </select>
                         <span id="badge-error"></span>
                     </div>
-                    <div >
+                    <div>
                         <label for="">Prix DH</label>
-                        <input type="number" id="prix" required>
+                        <input type="number" id="prix" >
                         <span id="prix-error"></span>
                     </div>
                     <div class="flex justify-between mx-5">
@@ -230,8 +230,56 @@
                     </div>
                 </form>
             </div>
+            </div>
         </div>
+
+
+
+
+        <div id="bg-folmulaire-modifier" class="hidden"></div>
+            <div id="folmulaire-modifier" class="hidden">
+            <div class=" bg-green-200  m-5 pb-5  ">
+                <h2 class="flex justify-center text-2xl">Nouvelle recette</h2>
+                <form id="form1" action="" class="flex flex-col gap-4 p-3 w-full ">
+                    <div>
+                        <label for="nom-plat">Nom du plat</label>
+                        <input required type="text" id="nom-plat" class="nom-plat-mod" value="">
+                        <span id="nom-plat-error" class="text-red-500"></span>
+                    </div>
+                    <div>
+                        <label for="">Catégorie</label>
+                        <select name="" id="categorie-mod" value="choisir" required>
+                            <option value="" disabled selected>— Choisir —</option>
+                            <option value="entree">Entrée</option>
+                            <option value="plat">Plat</option>
+                            <option value="dessert">Dessert</option>
+                        </select>
+                        <span id="categorie-error"></span>
+                    </div>
+                    <div>
+                        <label for="">Badge</label>
+                        <select name="" id="badge-mod" required>
+                            <option value="" disabled selected>— Choisir —</option>
+                            <option value="Classique">Classique</option>
+                            <option value="Bio">Bio</option>
+                            <option value="Végétarien">Végétarien</option>
+                        </select>
+                        <span id="badge-error"></span>
+                    </div>
+                    <div>
+                        <label for="">Prix DH</label>
+                        <input type="number" id="prix-mod" required>
+                        <span id="prix-error"></span>
+                    </div>
+                    <div class="flex justify-between mx-5">
+                        <button id="btn-submit-mod" class="" type="submit">Valider</button>
+                        <button id="btn-annuler-mod">Annuler</button>
+                    </div>
+                </form>
+            </div>
+            </div>
         </div>
+
 
     </main>
 
