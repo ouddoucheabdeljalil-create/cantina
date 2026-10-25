@@ -53,7 +53,7 @@ function afficherFood (){
     divBtn.appendChild(btnSupprime);
     divFood.appendChild(divBtn);
     
-
+    divFood.dataset.id = p.id;
     lmkla.appendChild(divFood)
     }
     
@@ -91,15 +91,34 @@ folumlaire.addEventListener('submit', function(e){
     compteur++;
     count.textContent = compteur;
 })
+
+
+
 lmkla.addEventListener('click' , (e) => {
-    console.log("hello")
+    
     if(e.target.classList.contains('btn-supprime')){
-        console.log("supmrime mmmm")
+       alert('hello')
         const divFood = e.target.closest('.divFood');
         divFood.remove()
+        let x = -1;
+        let y = Number(divFood.dataset.id)
+        console.log('y',y)
+        for(let i = 0 ; i < food.length ;i++){
+            if(y === food[i].id){
+                x = i
+                food.splice(i,1)
+                compteur--
+                count.textContent = compteur;
+            }
+            
+        }
+
+        console.log('x',x)
+        
     }
        
 })
+console.log(food)
 
 
 
