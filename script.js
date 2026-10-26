@@ -1,5 +1,6 @@
 const food = []
 
+
 const btnAjoute = document.getElementById('btn-ajoute');
 const folumlaire = document.getElementById('folmulaire');
 const btnSubmit = document.getElementById('btn-submit');
@@ -63,6 +64,7 @@ function afficherFood (){
     prix1.value = '';
 }
 const divFood = document.querySelector('.divFood')
+const btnModifier = document.querySelector('.btn-Modifier')
 
 let compteur = 0;
 
@@ -97,28 +99,57 @@ folumlaire.addEventListener('submit', function(e){
 lmkla.addEventListener('click' , (e) => {
     
     if(e.target.classList.contains('btn-supprime')){
-       alert('hello')
+        if(confirm('hi')){
+    
         const divFood = e.target.closest('.divFood');
         divFood.remove()
-        let x = -1;
-        let y = Number(divFood.dataset.id)
-        console.log('y',y)
+        
+        let checkId = Number(divFood.dataset.id)
+        
         for(let i = 0 ; i < food.length ;i++){
-            if(y === food[i].id){
+            if(checkId === food[i].id){
                 x = i
                 food.splice(i,1)
                 compteur--
                 count.textContent = compteur;
-            }
-            
-        }
-
-        console.log('x',x)
-        
-    }
-       
+            }   
+        } 
+    }}    
 })
-console.log(food)
+// const nomPlatMod = document.getElementById('nom-plat-mod')
+// const categorieMod = document.getElementById('categorie-mod')
+// const badgeMod = document.getElementById('badge-mod');
+// const prixMod = document.getElementById('prix-mod');
+// const bgFolmulaireMod = document.getElementById('bg-folmulaire-modifier');
+// const FolmulaireMod = document.getElementById('folmulaire-modifier');
+// lmkla.addEventListener('click', (e) => {
+//     if(e.target.classList.contains('btn-Modifier')){
+//     modifierFormulaire(e.target.dataset.id)
+    
+//     e.preventDefault()
+//     FolmulaireMod.classList.remove('hidden');
+//     bgFolmulaire.classList.remove('hidden')
+//     }
+
+// })
+// bgFolmulaire.addEventListener('click', function(){
+//     FolmulaireMod.classList.add('hidden');
+//     bgFolmulaire.classList.add('hidden');
+// })
+// function modifierFormulaire(id){
+//     let change = [food.find(p => p.id === Number(id))];
+//     console.log(change)
+//     for(let i of change){
+//         let x = document.getElementById('nom-plat')
+//         console.log(i.nom)
+//         console.log(x.value)
+//     }
+       
+    
+    
+// }
+
+
 
 
 

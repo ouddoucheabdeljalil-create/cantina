@@ -25,6 +25,14 @@
     border-radius: 12px;
     
  }
+  #btn-submit-mod,#btn-annuler-mod{
+    background-color: blue;
+    border-radius: 32px;
+    height: 40px;
+    width: 80px;
+    border-radius: 12px;
+    
+ }
  .divFood{
     background-color: #fff;
     display: flex;
@@ -40,7 +48,7 @@
  
  #bg-folmulaire{
     position: fixed;
-    
+    background-color: rgba(0, 0, 0, 0.63);
     bottom: 0px;
     height: 100%;
     width: 100%;
@@ -48,7 +56,13 @@
  #folmulaire{
     position: fixed;
     bottom: 70px;
-    left: 15px;
+    
+   
+}
+ #folmulaire-modifier{
+    position: fixed;
+    bottom: 200px;
+    left: 540px;
     width: 400px; 
 }
 .div-btn{
@@ -74,7 +88,7 @@
 
 @media (min-width : 768px){
 #folmulaire{
-    position: fixed;
+   
     left: 160px;
     width: 450px;
 }
@@ -87,11 +101,18 @@
     height: 848px;
  }
  #folmulaire{
-    position: fixed;
+    
     bottom: 180px;
-    left: 535px;
-    width: 400px;
+    left: 260px;
+    width: 500px;
 }
- 
+ @media (min-width: 1440px){
+    #folmulaire{
+    
+    
+    left: 490px;
+    width: 500px; 
+}
+ }
 }
 }
