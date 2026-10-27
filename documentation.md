@@ -18,3 +18,7 @@
 =>  un signal envoyé par le navigateur lorsqu'il se passe quelque chose sur une page Web .
 10. textContent () :
 => il permet de lire ou de modifier le texte brut d'un élément du DOM et de tous ses descendants, sans interpréter les balises .
+11. closest() :
+=> est une méthode du DOM qui permet de rechercher l’élément le plus proche correspondant à un sélecteur CSS, en partant de l’élément sélectionné et en remontant dans ses parents.
+12. contains() :
+=> La méthode permet de vérifier si un élément DOM contient un autre élément, directement ou indirectement. Elle retourne true si l’élément est contenu dans l’autre, sinon elle retourne false.
